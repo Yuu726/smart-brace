@@ -1,0 +1,13 @@
+com/smartBrace/model/Task.class
+com/smartBrace/SmartBraceApplication.class
+com/smartBrace/service/TaskService.class
+com/smartBrace/dao/TaskMapper.class
+com/smartBrace/service/UserService.class
+com/smartBrace/dao/ActionMapper.class
+com/smartBrace/controller/TaskController.class
+com/smartBrace/model/User.class
+com/smartBrace/controller/UserController.class
+com/smartBrace/model/Action.class
+com/smartBrace/dao/UserMapper.class
+com/smartBrace/service/impl/UserServiceImpl.class
+com/smartBrace/service/impl/TaskServiceImpl.class

@@ -1,0 +1,15 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/smartBrace?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true  # 自动映射数据库字段和Java属性的命名规则
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.smartBrace.model
