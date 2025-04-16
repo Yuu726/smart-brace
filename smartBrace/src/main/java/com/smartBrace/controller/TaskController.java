@@ -55,12 +55,20 @@ public class TaskController {
             return response;
         }
 
+        // 分配任务
         taskService.assignTask(task);
+
+        // 获取患者和医生的昵称
+        String doctorNickname = doctor != null ? doctor.getNickname() : "未知医生";
+        String patientNickname = patient != null ? patient.getNickname() : "未知患者";
 
         response.put("status", "success");
         response.put("message", "任务已成功分配");
         response.put("taskId", task.getId());
-        response.put("actionName", action != null ? action.getActionName() : "未知动作");  // 确保处理 action 为 null 的情况
+        response.put("actionName", action != null ? action.getActionName() : "未知动作");
+        response.put("doctorNickname", doctorNickname);
+        response.put("patientNickname", patientNickname);
+
         return response;
     }
 
@@ -122,8 +130,13 @@ public class TaskController {
             // 更新任务状态
             taskService.completeTask(taskId);
 
+            // 获取患者昵称
+            var patient = userService.findById(patientId);
+            String patientNickname = patient != null ? patient.getNickname() : "未知患者";
+
             response.put("status", "success");
             response.put("message", "任务已标记为完成");
+            response.put("patientNickname", patientNickname);  // 返回患者的昵称
             return ResponseEntity.ok(response);  // 返回 200 成功
 
         } catch (Exception e) {

@@ -9,6 +9,7 @@ public class User {
     private String phoneNumber;  // 手机号码作为账号
     private String password;
     private String role; // DOCTOR or PATIENT
+    private String nickname;  // 新增字段，表示用户昵称
 
     // Getters and Setters
 
@@ -42,5 +43,13 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 }

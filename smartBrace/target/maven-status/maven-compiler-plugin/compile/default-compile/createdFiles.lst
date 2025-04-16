@@ -1,6 +1,7 @@
 com/smartBrace/model/Task.class
 com/smartBrace/SmartBraceApplication.class
 com/smartBrace/service/TaskService.class
+com/smartBrace/dto/TaskResponseDTO.class
 com/smartBrace/dao/TaskMapper.class
 com/smartBrace/service/UserService.class
 com/smartBrace/dao/ActionMapper.class
