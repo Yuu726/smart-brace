@@ -48,4 +48,10 @@ public class UserServiceImpl implements UserService {
         }
         return user;
     }
+
+    @Override
+    public Integer findUserIdByNickname(String nickname) {
+        User user = userMapper.findByNickname(nickname);  // 调用Mapper方法根据昵称查找用户
+        return user != null ? user.getId() : null;  // 如果找到用户，返回ID，否则返回null
+    }
 }

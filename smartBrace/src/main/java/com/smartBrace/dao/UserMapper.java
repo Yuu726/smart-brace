@@ -17,4 +17,7 @@ public interface UserMapper {
     @Insert("INSERT INTO user(phone_number, password, role, nickname) VALUES(#{phoneNumber}, #{password}, #{role}, #{nickname})")
     void insert(User user);
 
+    // 新增：根据昵称查找用户
+    @Select("SELECT * FROM user WHERE nickname = #{nickname}")
+    User findByNickname(String nickname);
 }
